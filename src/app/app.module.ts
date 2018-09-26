@@ -6,11 +6,13 @@ import { Home } from '../pages/home/home';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ChartModule } from 'angular2-highcharts';
+import { TemperaturaPage } from '../pages/temperatura/temperatura';
 
 @NgModule({
   declarations: [
     MyApp,
-    Home    
+    Home,
+    TemperaturaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -20,7 +22,8 @@ import { ChartModule } from 'angular2-highcharts';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Home
+    Home,
+    TemperaturaPage
   ],
   providers: [
     StatusBar,
