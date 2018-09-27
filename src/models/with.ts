@@ -16,9 +16,43 @@ export class With {
         this._time = time
     }
 
-    
+    public get thing(): string {
+        return this._thing
+    }
 
+    public get created():string {
+        return this._created
+    }
 
+    public get content(): Content {
+        return this._content
+    }
 
+    public get date(): string {
+        return  this._date
+    }
 
+    public get time(): string {
+        return this._time
+    }
+
+    public set thing(value: string) {
+        this._thing = value
+    }
+
+    public set created(value: string) {
+        this._created = value
+    }
+
+    public set content(value: Content) {
+        this._content = value
+    }
+
+    public set date(value: string) {
+        this._date = value
+    }
+
+    public set time(value: string) {
+        this._time = value
+    }
 }

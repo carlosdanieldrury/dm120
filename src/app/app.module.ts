@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ChartModule } from 'angular2-highcharts';
 import { TemperaturaPage } from '../pages/temperatura/temperatura';
+import { DweetServiceProvider } from '../providers/dweet-service'
 
 @NgModule({
   declarations: [
@@ -26,8 +27,7 @@ import { TemperaturaPage } from '../pages/temperatura/temperatura';
     TemperaturaPage
   ],
   providers: [
-    StatusBar,
-    SplashScreen
+    DweetServiceProvider
   ]
 })
 export class AppModule {}
