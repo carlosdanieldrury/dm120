@@ -3,13 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Projeto base</ion-title>
+    <ion-title>Incubadora neonatal</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding >
   <p>
-    Este é um projeto base.
+    Monitoração dos parâmetros da incubadora.
   </p>  
+
+  <p style="text-align: center;">
+    <button ion-button color="secondary" outline icon-left (click)="goToTempPage()">
+      <ion-icon name='rainy' color="blue"></ion-icon>
+      Temperatura
+    </button>
+  </p>
  
 </ion-content>
