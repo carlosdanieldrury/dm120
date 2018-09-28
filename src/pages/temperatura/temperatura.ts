@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Dweet } from '../../models/dweet'
 import { DweetServiceProvider } from '../../providers/dweet-service'
 import { DweetSettingsEnum } from '../../enum/DweetSettingsEnum'
+import { Chart } from 'angular-highcharts';
 
 /**
  * Generated class for the TemperaturaPage page.
@@ -24,10 +25,11 @@ export class TemperaturaPage {
   private time: any
   private dataPlot: Array<any>
 
-  chart: Object
-  options: Object
+  public chart: Object
+  public options: Object
 
   saveInstance(chartInstance) {
+    console.log("Chart Instance = ", chartInstance)
     this.chart = chartInstance
   }
 
@@ -50,18 +52,21 @@ export class TemperaturaPage {
 
   private preencherDweet(data: any) {
     this.dweet = this.dweetService.preencherDweet(data)
+    console.log("Preenche Dweet = ", this.dweet )
     this.loadDataForPlot(this.dweet)
     this.plotChart()
   }
 
   private loadDataForPlot(dweet: Dweet) {
-    for(let _with of dweet.getWith()) {
-      let epoch = new Date(_with.getCreated()).getTime()
-      this.dataPlot.push([epoch, _with.getContent().getTemperatura()])
+    for(let _with of dweet.with) {
+      let epoch = new Date(_with.created).getTime()
+      console.log("epoch = ", epoch)
+      this.dataPlot.push([epoch, _with.content.getTemperatura()])
     }
   }
 
   private plotChart() {
+    console.log("Chart = ", this.chart)
     this.options = {
       xAxis: {
         type: 'datetime'
@@ -79,7 +84,7 @@ export class TemperaturaPage {
       series: [{
         name: 'temperatura',
         data: this.dataPlot.reverse(),
-        pointInterval: 60*60
+        pointInterval: 60 * 60
       }]
     }
   }

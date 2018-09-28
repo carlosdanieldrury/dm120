@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Http } from '@angular/http'
 import { Injectable } from '@angular/core'
 import { DweetSettingsEnum } from './../enum/DweetSettingsEnum'
 import { Content } from './../models/content'
@@ -11,7 +11,7 @@ export class DweetServiceProvider {
 
     private dweetioApiUrl = DweetSettingsEnum.DWEET_URL_GET_ALL
 
-    constructor(public http: HttpClient) {
+    constructor(public http: Http) {
         console.log('Hello DweetServiceProvider Provider')
     }
 
