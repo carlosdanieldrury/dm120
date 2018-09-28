@@ -32,7 +32,7 @@ export class DweetServiceProvider {
         for (let _with of data.with) {
             
             let tempContent: Content
-            tempContent = new Content(_with.content.temperatura)
+            tempContent = new Content(_with.content.temperatura, _with.content.luminosidade)
 
             _date = this.formatDate(_with.created)
             _time = this.formatTime(_with.created)

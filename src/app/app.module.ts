@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http'
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+import { LuminosidadePage } from '../pages/luminosidade/luminosidade';
 
 declare var require: any;
 export function highchartsFactory() {
@@ -25,7 +26,8 @@ export function highchartsFactory() {
   declarations: [
     MyApp,
     Home,
-    TemperaturaPage
+    TemperaturaPage,
+    LuminosidadePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -37,7 +39,8 @@ export function highchartsFactory() {
   entryComponents: [
     MyApp,
     Home,
-    TemperaturaPage
+    TemperaturaPage,
+    LuminosidadePage
   ],
   providers: [
     HighchartsStatic,

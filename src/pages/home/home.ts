@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 
 import { TemperaturaPage } from './../temperatura/temperatura'
 
+import { LuminosidadePage } from './../luminosidade/luminosidade'
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,5 +17,9 @@ export class Home {
 
   goToTempPage() {
     this.navCtrl.push(TemperaturaPage)
+  }
+
+  goToLumiPage() {
+    this.navCtrl.push(LuminosidadePage)
   }
 }

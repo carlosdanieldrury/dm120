@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { LuminosidadePage } from '../pages/luminosidade/luminosidade';
 import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { Home } from '../pages/home/home';
 
@@ -28,7 +28,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: Home },
-      { title: 'Temperatura', component: TemperaturaPage }
+      { title: 'Temperatura', component: TemperaturaPage },
+      { title: 'Luminosidade', component: LuminosidadePage }
     ];
 
   }
